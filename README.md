@@ -17,14 +17,16 @@ Search engines may penalize duplicate content. Social shares lack canonical URL 
 Fix:
 
 html
-Copy
+```
 <!-- Add og:url + harmonize descriptions -->
 <meta property="og:url" content="https://utx.exchange" />
 <meta 
   name="description" 
   content="Trade BTC, ETH, and cryptocurrencies with up to 50x leverage on U2U."
 />
+```
 Run HTML
+
 2. Security Risks
 Problem:
 
@@ -37,9 +39,8 @@ Impact:
 Third-party CDN compromises could inject malicious code.
 
 Fix:
-
 html
-Copy
+```
 <!-- Add SRI hashes -->
 <script 
   src="https://unpkg.com/react/umd/react.production.min.js" 
@@ -47,6 +48,7 @@ Copy
   crossorigin="anonymous">
 </script>
 <!-- Implement CSP via HTTP header or meta tag -->
+```
 Run HTML
 3. Performance Bottlenecks
 Problem:
@@ -62,7 +64,7 @@ Slow page loads harm user retention (Lighthouse scores likely <70/100).
 Fix:
 
 html
-Copy
+```
 <!-- Reduce font weights + enable swap -->
 <link 
   href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&display=swap" 
@@ -72,7 +74,9 @@ Copy
 <style>
   /* Above-the-fold styles */
 </style>
+```
 Run HTML
+
 4. Accessibility Gaps
 Problem:
 
@@ -87,13 +91,17 @@ Fails WCAG 2.1 AA compliance, excluding users with visual impairments.
 Fix:
 
 css
-Copy
+```
 /* Increase contrast */
 body { color: #E5E7EB; background: #1A1D24; }
+
+```
 jsx
-Copy
+```
 {/* Add ARIA live regions */}
 <div aria-live="polite" aria-atomic>{livePrice}</div>
+
+```
 Section 6: Faucet Page
 1. Inconsistent Branding
 Problem:
@@ -108,12 +116,15 @@ Weakens brand identity; social shares lack preview images.
 
 Fix:
 
-html
-Copy
+HTML
+
+```
 <!-- Standardize fonts + add OG tags -->
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 <meta property="og:image" content="https://uniultra.foundation/.../branded-image.webp" />
+```
 Run HTML
+
 2. Security Oversights
 Problem:
 
@@ -125,11 +136,15 @@ Risk of compromised stylesheets or downtime.
 
 Fix:
 
-html
-Copy
+HTML
+
+```
 <!-- Host icons locally or use official CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+```
 Run HTML
+
 Section 7: Empty Content
 Issue:
 
@@ -137,7 +152,7 @@ No HTML or components provided for analysis.
 
 Recommendation:
 
-Confirm if this is a placeholder for future functionality or an error.
+Could you please confirm if this is a placeholder for future functional or an error?
 
 Priority Action Items
 Section	Task	Severity
@@ -158,8 +173,8 @@ Performance Monitoring:
 
 Set up Lighthouse CI to enforce scores >90/100.
 
-Prepared by: [Your Name]
-Role: Senior Frontend Engineer
-Contact: [Your Email]
+Prepared by: iVGeek
+Role: Senior Fullstack Engineer
+Contact: ianvincent916@gmail.com
 
 Let me know if you need further code examples or implementation support.
